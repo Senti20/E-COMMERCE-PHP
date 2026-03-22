@@ -1,0 +1,230 @@
+/* ========================================
+   Index/Homepage Styles - PC Parts Hub
+   For index.php ONLY - Matching screenshot
+   ======================================== */
+
+:root {
+    --primary-color: #0d6efd;
+    --secondary-color: #6c757d;
+    --success-color: #198754;
+    --dark-bg: #212529;
+    --transition: all 0.3s ease;
+}
+
+* {
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+/* ========================================
+   HERO SECTION - Matching screenshot
+   ======================================== */
+.hero-section {
+    background-image: url('assets/img/Pc.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    padding: 5rem 0;
+    margin-bottom: 2rem;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: 0;
+}
+
+/* ========================================
+   FEATURED BRANDS - Matching screenshot
+   ======================================== */
+.text-primary {
+    color: #0d6efd !important;
+}
+
+.d-flex.align-items-center span:first-child {
+    font-size: 1.2rem;
+}
+
+.d-flex.align-items-center span:last-child {
+    font-weight: 500;
+    color: #333;
+}
+
+/* Motherboards Card */
+.stat-card {
+    transition: var(--transition);
+    border-radius: 15px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+.stat-card i {
+    font-size: 3rem;
+}
+
+.stat-card h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.stat-card p {
+    color: #6c757d;
+    margin-bottom: 0;
+}
+
+/* ========================================
+   PRODUCT CARDS - Matching screenshot
+   ======================================== */
+.product-card {
+    transition: var(--transition);
+    border-radius: 15px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    position: relative;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.product-card .card-img-top {
+    height: 200px;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.product-card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+.product-card .badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-weight: 600;
+    z-index: 1;
+}
+
+.product-card .card-body {
+    padding: 1.5rem;
+}
+
+/* ========================================
+   BUTTONS - Matching screenshot
+   ======================================== */
+.btn-primary {
+    background: linear-gradient(135deg, #0d6efd, #0b5ed7);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(13, 110, 253, 0.3);
+}
+
+.btn-outline-primary {
+    border: 2px solid #0d6efd;
+    color: #0d6efd;
+    padding: 0.75rem 1.5rem;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.btn-outline-primary:hover {
+    background: linear-gradient(135deg, #0d6efd, #0b5ed7);
+    border-color: transparent;
+    color: white;
+}
+
+/* ========================================
+   SECTION TITLES - Matching screenshot
+   ======================================== */
+h2.text-primary {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #0d6efd !important;
+}
+
+.text-muted {
+    color: #6c757d !important;
+}
+
+/* ========================================
+   RESPONSIVE - Matching screenshot
+   ======================================== */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+    
+    h2.text-primary {
+        font-size: 1.75rem;
+    }
+    
+    .col-md-6 .row {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        padding: 3rem 0;
+    }
+    
+    .hero-content h1 {
+        font-size: 1.75rem;
+    }
+}
